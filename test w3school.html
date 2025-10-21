@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Starter Website</title>
+  <meta name="description" content="A clean, responsive starter website created for VS Code." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">MySite</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <h1>Build fast, beautiful websites</h1>
+        <p>A minimal responsive starter template you can open and edit in VS Code.</p>
+        <p><a class="btn" href="#features">See features</a></p>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Mobile-first layout using CSS Grid and Flexbox.</p>
+        </article>
+        <article class="card">
+          <h3>Accessible</h3>
+          <p>Semantic HTML and ARIA where needed for improved accessibility.</p>
+        </article>
+        <article class="card">
+          <h3>Extensible</h3>
+          <p>Easy to customize: styles, scripts, and components are separated.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About</h2>
+      <p>This template is meant to get you started quickly in Visual Studio Code. Edit the files, add pages, or connect it to a build tool later.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required minlength="2" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Send message</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> MySite • Built with VS Code</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
